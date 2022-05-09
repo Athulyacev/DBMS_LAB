@@ -1,0 +1,316 @@
+>  use myclass
+switched to db myclass
+> db.createCollection("Db_Students");
+{ "ok" : 1 }
+> db.Db_Students.insert({"student_name":"Aswathi kv","student_rollno":001,"subjects":["DBMS","JAVA","COMPUTER NETWORK"],"MARKS":[90,89,92]})
+WriteResult({ "nInserted" : 1 })
+> db.Db_Students.insert({"student_name":"Athulya","student_rollno":002,"subjects":["DBMS","JAVA","COMPUTER NETWORK"],"MARKS":[92,89,90]})
+WriteResult({ "nInserted" : 1 })
+> db.Db_Students.insert({"student_name":"Aswathi k","student_rollno":003,"subjects":["DBMS","JAVA","COMPUTER NETWORK"],"MARKS":[88,89,95]})
+WriteResult({ "nInserted" : 1 })
+> db.Db_Students.insert({"student_name":"Aswathi s santhosh","student_rollno":004,"subjects":["DBMS","JAVA","COMPUTER NETWORK"],"MARKS":[88,89,90]})
+WriteResult({ "nInserted" : 1 })
+> db.Db_Students.insert({"student_name":"Civet","student_rollno":005,"subjects":["DBMS","JAVA","COMPUTER NETWORK"],"MARKS":[85,89,92]})
+WriteResult({ "nInserted" : 1 })
+> db.Db_Students.insert({"student_name":"Madhuri","student_rollno":006,"subjects":["DBMS","JAVA","COMPUTER NETWORK"],"MARKS":[87,89,93]})
+WriteResult({ "nInserted" : 1 })
+> db.Db_Students.insert({"student_name":"Lakshmipriya","student_rollno":007,"subjects":["DBMS","JAVA","COMPUTER NETWORK"],"MARKS":[87,89,90]})
+WriteResult({ "nInserted" : 1 })
+> db.Db_Students.insert({"student_name":"Anusree","student_rollno":008,"subjects":["DBMS","JAVA","COMPUTER NETWORK"],"MARKS":[82,89,90]})
+WriteResult({ "nInserted" : 1 })
+> db.Db_Students.insert({"student_name":"Anamika","student_rollno":009,"subjects":["DBMS","JAVA","COMPUTER NETWORK"],"MARKS":[88,79,85]})
+WriteResult({ "nInserted" : 1 })
+> db.Db_Students.insert({"student_name":"Anitta","student_rollno":010,"subjects":["DBMS","JAVA","COMPUTER NETWORK"],"MARKS":[70,79,85]})
+WriteResult({ "nInserted" : 1 })
+> db.Db_Students.find().pretty()
+{
+	"_id" : ObjectId("6278abfc20e08417fb7af4e3"),
+	"student_name" : "Aswathi kv",
+	"student_rollno" : 1,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		90,
+		89,
+		92
+	]
+}
+{
+	"_id" : ObjectId("6278ac1020e08417fb7af4e4"),
+	"student_name" : "Athulya",
+	"student_rollno" : 2,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		92,
+		89,
+		90
+	]
+}
+{
+	"_id" : ObjectId("6278ac2b20e08417fb7af4e5"),
+	"student_name" : "Aswathi k",
+	"student_rollno" : 3,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		88,
+		89,
+		95
+	]
+}
+{
+	"_id" : ObjectId("6278ac6d20e08417fb7af4e6"),
+	"student_name" : "Aswathi s santhosh",
+	"student_rollno" : 4,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		88,
+		89,
+		90
+	]
+}
+{
+	"_id" : ObjectId("6278ac8920e08417fb7af4e7"),
+	"student_name" : "Civet",
+	"student_rollno" : 5,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		85,
+		89,
+		92
+	]
+}
+{
+	"_id" : ObjectId("6278acaf20e08417fb7af4e8"),
+	"student_name" : "Madhuri",
+	"student_rollno" : 6,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		87,
+		89,
+		93
+	]
+}
+{
+	"_id" : ObjectId("6278acce20e08417fb7af4e9"),
+	"student_name" : "Lakshmipriya",
+	"student_rollno" : 7,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		87,
+		89,
+		90
+	]
+}
+{
+	"_id" : ObjectId("6278ace020e08417fb7af4ea"),
+	"student_name" : "Anusree",
+	"student_rollno" : 8,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		82,
+		89,
+		90
+	]
+}
+{
+	"_id" : ObjectId("6278aced20e08417fb7af4eb"),
+	"student_name" : "Anamika",
+	"student_rollno" : 9,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		88,
+		79,
+		85
+	]
+}
+{
+	"_id" : ObjectId("6278ad0020e08417fb7af4ec"),
+	"student_name" : "Anitta",
+	"student_rollno" : 8,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		70,
+		79,
+		85
+	]
+}
+> db.Db_Students.update({"student_name":"Anitta"},{$set:{"MARKS":[75,78,79]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.Db_Students.remove({"student_name":"Aswathi kv"})
+WriteResult({ "nRemoved" : 1 })
+> db.Db_Students.find().pretty()
+{
+	"_id" : ObjectId("6278ac1020e08417fb7af4e4"),
+	"student_name" : "Athulya",
+	"student_rollno" : 2,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		92,
+		89,
+		90
+	]
+}
+{
+	"_id" : ObjectId("6278ac2b20e08417fb7af4e5"),
+	"student_name" : "Aswathi k",
+	"student_rollno" : 3,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		88,
+		89,
+		95
+	]
+}
+{
+	"_id" : ObjectId("6278ac6d20e08417fb7af4e6"),
+	"student_name" : "Aswathi s santhosh",
+	"student_rollno" : 4,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		88,
+		89,
+		90
+	]
+}
+{
+	"_id" : ObjectId("6278ac8920e08417fb7af4e7"),
+	"student_name" : "Civet",
+	"student_rollno" : 5,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		85,
+		89,
+		92
+	]
+}
+{
+	"_id" : ObjectId("6278acaf20e08417fb7af4e8"),
+	"student_name" : "Madhuri",
+	"student_rollno" : 6,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		87,
+		89,
+		93
+	]
+}
+{
+	"_id" : ObjectId("6278acce20e08417fb7af4e9"),
+	"student_name" : "Lakshmipriya",
+	"student_rollno" : 7,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		87,
+		89,
+		90
+	]
+}
+{
+	"_id" : ObjectId("6278ace020e08417fb7af4ea"),
+	"student_name" : "Anusree",
+	"student_rollno" : 8,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		82,
+		89,
+		90
+	]
+}
+{
+	"_id" : ObjectId("6278aced20e08417fb7af4eb"),
+	"student_name" : "Anamika",
+	"student_rollno" : 9,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		88,
+		79,
+		85
+	]
+}
+{
+	"_id" : ObjectId("6278ad0020e08417fb7af4ec"),
+	"student_name" : "Anitta",
+	"student_rollno" : 8,
+	"subjects" : [
+		"DBMS",
+		"JAVA",
+		"COMPUTER NETWORK"
+	],
+	"MARKS" : [
+		75,
+		78,
+		79
+	]
+}
+

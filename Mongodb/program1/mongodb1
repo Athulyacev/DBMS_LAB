@@ -1,0 +1,48 @@
+> use MyCev
+switched to db MyCev
+> db.createCollection("db_mca");
+{ "ok" : 1 }
+> db.db_mca.insert({"ID":001,"Name":"Athulya"})
+WriteResult({ "nInserted" : 1 })
+> db.db_mca.insert({"ID":002,"Name":"Aswathi kv"})
+WriteResult({ "nInserted" : 1 })
+>  db.db_mca.insert({"ID":003,"Name":"Aswathi k"})
+WriteResult({ "nInserted" : 1 })
+> db.db_mca.insert({"ID":004,"Name":"Aswathi s santhosh"})
+WriteResult({ "nInserted" : 1 })
+> db.db_mca.insert({"ID":005,"Name":"Madhuri"})
+WriteResult({ "nInserted" : 1 })
+> db.db_mca.insert({"ID":006,"Name":"Civet"})
+WriteResult({ "nInserted" : 1 })
+> db.db_mca.insert({"ID":007,"Name":"Lakshmipriya"})
+WriteResult({ "nInserted" : 1 })
+> db.db_mca.insert({"ID":008,"Name":"Anusree"})
+WriteResult({ "nInserted" : 1 })
+> db.db_mca.insert({"ID":009,"Name":"Athira"})
+WriteResult({ "nInserted" : 1 })
+> db.db_mca.insert({"ID":010,"Name":"Malu"})
+WriteResult({ "nInserted" : 1 })
+> db.db_mca.find().limit(5)
+{ "_id" : ObjectId("6277e20ab7bd06e53ceb3ce6"), "ID" : 1, "Name" : "Athulya" }
+{ "_id" : ObjectId("6277e219b7bd06e53ceb3ce7"), "ID" : 2, "Name" : "Aswathi kv" }
+{ "_id" : ObjectId("6277e226b7bd06e53ceb3ce8"), "ID" : 3, "Name" : "Aswathi k" }
+{ "_id" : ObjectId("6277e232b7bd06e53ceb3ce9"), "ID" : 4, "Name" : "Aswathi s santhosh" }
+{ "_id" : ObjectId("6277e23cb7bd06e53ceb3cea"), "ID" : 5, "Name" : "Madhuri" }
+> db.db_mca.find().sort({"Name":1})
+{ "_id" : ObjectId("6277e271b7bd06e53ceb3ced"), "ID" : 8, "Name" : "Anusree" }
+{ "_id" : ObjectId("6277e226b7bd06e53ceb3ce8"), "ID" : 3, "Name" : "Aswathi k" }
+{ "_id" : ObjectId("6277e219b7bd06e53ceb3ce7"), "ID" : 2, "Name" : "Aswathi kv" }
+{ "_id" : ObjectId("6277e232b7bd06e53ceb3ce9"), "ID" : 4, "Name" : "Aswathi s santhosh" }
+{ "_id" : ObjectId("6277e296b7bd06e53ceb3cee"), "ID" : 9, "Name" : "Athira" }
+{ "_id" : ObjectId("6277e20ab7bd06e53ceb3ce6"), "ID" : 1, "Name" : "Athulya" }
+{ "_id" : ObjectId("6277e247b7bd06e53ceb3ceb"), "ID" : 6, "Name" : "Civet" }
+{ "_id" : ObjectId("6277e263b7bd06e53ceb3cec"), "ID" : 7, "Name" : "Lakshmipriya" }
+{ "_id" : ObjectId("6277e23cb7bd06e53ceb3cea"), "ID" : 5, "Name" : "Madhuri" }
+{ "_id" : ObjectId("6277e2a3b7bd06e53ceb3cef"), "ID" : 8, "Name" : "Malu" }
+> db.db_mca.remove({})
+WriteResult({ "nRemoved" : 10 })
+> db.db_mca.drop()
+true
+>  db.dropDatabase()
+{ "dropped" : "MyCev", "ok" : 1 }
+
